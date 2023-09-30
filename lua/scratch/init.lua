@@ -69,10 +69,7 @@ function M.setup(config)
   hpad = config.hpad or hpad
 
   vim.cmd("command! Scratch lua require'scratch'.ToggleScratch()")
-  vim.keymap.set("n", "<leader>ss", ":Scratch<CR>", { noremap = true })
+  -- vim.keymap.set("n", "<leader>ss", ":Scratch<CR>", { noremap = true })
 end
-
--- vim.cmd("command! Scratch lua require'scratch'.ToggleScratch()")
--- vim.keymap.set("n", "<leader>ss", ":Scratch<CR>", { noremap = true })
 
 return M
