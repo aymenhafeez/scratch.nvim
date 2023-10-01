@@ -15,8 +15,6 @@ local default_opts = {
 local scratch_content = {}
 local scratch_buf = nil
 local scratch_win = nil
-local vpad = 4
-local hpad = 10
 
 function M.ToggleScratch(config)
     config = config or {}
@@ -54,10 +52,8 @@ end
 
 function M.setup(config)
     config = config or {}
-    vpad = config.vpad or vpad
-    hpad = config.hpad or hpad
 
-    vim.cmd([[command! Scratch lua require'scratch'.ToggleScratch(vim.fn["scratch#config"]())]])
+    vim.cmd([[command! Scratch lua require'scratch'.ToggleScratch({})]])
 end
 
 return M
