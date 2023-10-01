@@ -50,9 +50,7 @@ function M.SaveScratch()
     end
 end
 
-function M.setup(config)
-    config = config or {}
-
+function M.setup()
     vim.cmd([[command! Scratch lua require'scratch'.ToggleScratch({})]])
 end
 
