@@ -53,7 +53,7 @@ function M.SaveScratch()
 end
 
 function M.setup()
-  vim.cmd([[command! Scratch lua require'your_plugin'.ToggleScratch({})]])
+  vim.cmd([[command! Scratch lua require'scratch'.ToggleScratch({})]])
 end
 
 return M
