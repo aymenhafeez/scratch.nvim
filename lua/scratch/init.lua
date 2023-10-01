@@ -52,8 +52,10 @@ function M.SaveScratch()
   end
 end
 
-function M.setup()
-  vim.cmd([[command! Scratch lua require'scratch'.ToggleScratch(vim.fn["scratch#config"]())]])
+function M.setup(config)
+  default_opts = config.opts or default_opts
+
+  vim.cmd([[command! Scratch lua require'scratch'.ToggleScratch(config)]])
 end
 
 return M
