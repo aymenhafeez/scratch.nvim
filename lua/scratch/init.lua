@@ -18,7 +18,7 @@ local scratch_win = nil
 
 function M.ToggleScratch(config)
   config = config or {}
-  local opts = vim.tbl_extend("force", default_opts, config)
+  local opts = config.opts or default_opts
 
   if scratch_buf and not vim.api.nvim_buf_is_valid(scratch_buf) then
     scratch_buf = nil
