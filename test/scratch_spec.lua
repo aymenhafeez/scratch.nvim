@@ -1,4 +1,3 @@
--- just testing out testing with plenary
 describe("scratch", function()
   it("can be required", function()
     require("scratch")
@@ -6,5 +5,9 @@ describe("scratch", function()
 
   it("can open scratch float window", function()
     require("scratch").ToggleScratch()
+  end)
+
+  it("can save scratch window text", function()
+    require("scratch").SaveScratch()
   end)
 end)
